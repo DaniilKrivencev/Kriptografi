@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Криптографические Шифры</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="lock-icon">🔐</span>
+                <h1>КРИПТОГРАФИЯ</h1>
+            </div>
+            <p class="subtitle">Шифрование и дешифрование текста</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Cipher Selection -->
+            <section class="cipher-selector">
+                <label for="cipher-select">Выберите шифр:</label>
+                <select id="cipher-select" class="select-box">
+                    <option value="">-- Выберите алгоритм --</option>
+                </select>
+            </section>
+
+            <!-- Cipher Description -->
+            <section class="cipher-description" id="cipher-description">
+                <h3>📖 Описание алгоритма</h3>
+                <p id="description-text">Выберите шифр для просмотра описания</p>
+            </section>
+
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-group">
+                    <label for="input-text">Введите текст:</label>
+                    <textarea id="input-text" class="text-area" placeholder="Введите текст для шифрования..."
+                        rows="6"></textarea>
+                </div>
+
+                <!-- Parameters Section -->
+                <div class="params-section" id="params-section">
+                    <!-- Dynamic parameters will be inserted here -->
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="button-group">
+                    <button id="encrypt-btn" class="btn btn-primary">
+                        <span class="btn-icon">🔒</span>
+                        Зашифровать
+                    </button>
+                    <button id="decrypt-btn" class="btn btn-secondary">
+                        <span class="btn-icon">🔓</span>
+                        Расшифровать
+                    </button>
+                    <button id="clear-btn" class="btn btn-clear">
+                        <span class="btn-icon">🗑️</span>
+                        Очистить
+                    </button>
+                </div>
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section">
+                <div class="output-header">
+                    <label>Результат:</label>
+                    <button id="copy-btn" class="btn-copy" title="Копировать результат">
+                        <span class="copy-icon">📋</span>
+                        Копировать
+                    </button>
+                </div>
+                <pre id="output-text" class="output-box">
+                    Результат появится здесь...
+                </pre>
+            </section>
+
+
+            <!-- Dynamic Visualizer Section -->
+            <section id="visualizer-section" class="visualizer-section hidden">
+                <div class="visualizer-header">
+                    <h4 id="visualizer-title">📊 ВИЗУАЛИЗАЦИЯ АЛГОРИТМА</h4>
+                </div>
+                <div id="visualizer-content" class="visualizer-content">
+                    <!-- Content injected by JS -->
+                </div>
+            </section>
+
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <div class="info-card">
+                    <h4>💡 Подсказка</h4>
+                    <p>Текст автоматически форматируется: удаляются пробелы, текст приводится к нижнему регистру,
+                        результат группируется по 5 символов.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Криптографические алгоритмы для образовательных целей</p>
+            <p class="footer-note">Создано для изучения классических шифров</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
